@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Success Modal with Animation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Tailwind animation -->
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <!-- Modal -->
+  <div id="successModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+    <div id="modalBox" class="bg-white p-6 rounded-xl shadow-xl max-w-sm w-full text-center fade-in-up">
+      <div class="text-green-500 text-5xl  flex  justify-center border-1 ">
+        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+<dotlottie-wc src="https://lottie.host/d06cc695-d112-4ac7-b537-be60763d1004/yPkMkytHJ6.lottie" style="width: 300px;height: 300px" speed="1" autoplay ></dotlottie-wc>
+      </div>
+      <h2 class="text-xl font-bold mb-2">You are Successfully Signed Up!</h2>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300 transform hover:scale-105">
+       Continue
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>

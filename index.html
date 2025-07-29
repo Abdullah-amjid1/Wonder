@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="s" href="">
+     <link rel="icon" type="image/x-icon" href="coreos-fill.svg">
+    <title>Wonder</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+  [data-carousel-slide-to] {
+    transition: background-color 0.3s;
+  }
+</style>
+  </head>
+  <body class="bg-[#100F0F] flex w-full min-h-screen items-center justify-center">
+    <div class=" h-[740px] lg:w-[80%] w-[90%] md:w-[95%] md:my-10 xl:w-[80%] 2xl:w-[53%] xl:gap-10 bg-white rounded-[50px] py-10 flex justify-between px-10 md:px-30 relative">
+      <!-- slider -->
+      <div
+        class="w-[calc(100%-5rem)] md:w-[44%] h-[80px] pt-15 md:pt-0 md:h-[660px] absolute z-10 bg-teal-700 bottom-5 md:bottom-10  md:left-12 rounded-[40px] transition-all duration-300 flex items-center"
+        id="slide">
+          
+<!-- Carousel Container -->
+<div id="indicators-carousel" class="relative w-full transition-all">
+  <!-- Carousel Wrapper -->
+  <div class="hidden md:block relative h-56 overflow-hidden rounded-lg md:h-96 transition-all">
+    <!-- Slides -->
+    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item="active">
+      <img src="https://png.pngtree.com/png-vector/20230915/ourmid/pngtree-d-minimal-marketing-strategy-concept-business-analysis-marketing-data-analysis-screen-png-image_10075192.png"
+        class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+    </div>
+    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="https://png.pngtree.com/png-vector/20241108/ourmid/pngtree-3d-data-analytics-dashboard-with-rising-graph-on-transparent-background-png-image_14323466.png"
+        class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+    </div>
+    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="https://png.pngtree.com/png-vector/20231016/ourmid/pngtree-presentation-business-3d-illustration-png-image_10188708.png"
+        class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+    </div>
+    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="https://png.pngtree.com/png-vector/20220725/ourmid/pngtree-collaboration-of-partners-vector-png-image_5590476.png"
+        class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+    </div>
+    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="https://png.pngtree.com/png-vector/20230912/ourmid/pngtree-businessman-and-time-management-png-image_10018388.png"
+        class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+    </div>
+  </div>
+
+  <!-- Indicators -->
+  <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2 transition-all">
+    <button class="dot w-3 h-3 rounded-full bg-gray-600 transition-colors" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+    <button class="dot w-3 h-3 rounded-full bg-gray-600 transition-colors" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+    <button class="dot w-3 h-3 rounded-full bg-gray-600 transition-colors" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+    <button class="dot w-3 h-3 rounded-full bg-gray-600 transition-colors" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+    <button class="dot w-3 h-3 rounded-full bg-gray-600 transition-colors" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+  </div>
+</div>
+        
+      </div>
+
+      <form action="" class="w-full md:w-65 flex flex-col gap-10 hidden md:block " id="Form1">
+        <div class="flex w-full items-center pt-12">
+          <div><i class="ri-coreos-fill text-3xl"></i></div>
+          <p class="font-bold text-xl">Wonder</p>
+        </div>
+        <div class="flex flex-col gap-2 pt-6">
+          <p class="text-4xl font-semibold tracking-wide">Welcome Back</p>
+          <p class="text-sm text-zinc-400 flex">
+            Not registred yet?
+            <a href="" onclick="slideLeft(event) " class="hidden md:block font-bold text-black focus:outline-none">Sign up</a>
+            <a href="" onclick="toggle()" class="md:hidden font-bold text-black focus:outline-none">Sign up</a>
+            
+        </div>
+        <div class="flex flex-col gap-6">
+            <div class="relative z-0 ">
+                <input type="email" id="Email_up" class="block py-2.5 px-0 w-full text-sm text-zinc-400 bg-transparent  appearance-none border-0 border-b-1 border-zinc-400 dark:text-black dark:border-zinv-400  focus:outline-none focus:ring-0 focus:border-black peer" placeholder=""/>
+                <label for="disabled_standard" class="absolute text-base text-gray-400 dark:text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-zinc-400 peer-focus:dark:text-zinc-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"> Email </label >
+            </div>
+            
+          <div class="relative z-0 flex w-ful border-0 border-b-1 border-zinc-400 transition-all hover:border-b-1 hover:border-black">
+                <input type="password" id="password1" class="block py-2.5 px-0 w-full text-sm text-zinc-400 bg-transparent  appearance-none dark:text-black dark:border-zinv-400  focus:outline-none focus:ring-0 focus:border-black peer" placeholder=""/>
+                <label for="disabled_standard" class="absolute text-base text-gray-400 dark:text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-zinc-400 peer-focus:dark:text-zinc-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"> Password </label >
+                  <button type="button" onclick="showPassword()" class="cursor-pointer focus:outline-none"  ><i class="ri-eye-line hidden" id="open"></i><i class="ri-eye-off-line " id="close"></i></button>
+          </div>
+          <div class="flex items-center hidden " id="Error1">
+            <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" fill="red"/>
+            </svg>
+            <div class="text-red-600 text-sm">
+              <span class="font-medium">Incorrect!</span> Email and Password!
+            </div>
+          </div>
+
+          <div class="flex items-center hidden" id="Error2">
+            <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" fill="red"/>
+            </svg>
+            <div class="text-red-600 text-sm ">
+              <span class="font-medium">Incorrect!</span> Email Address!
+            </div>
+          </div>
+
+          <div class="flex items-center hidden" id="Error3">
+            <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" fill="red"/>
+            </svg>
+            <div class="text-red-600 text-sm">
+              <span class="font-medium">Incorrect!</span> Passwords!
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5">
+          <button onclick="signUp()"
+            class="bg-black text-white h-10 rounded-xl hover:bg-white hover:border-1 hover:border-black hover:text-black transition-all duration-300 cursor-pointer"
+          >
+            Sign in
+          </button>
+          <button
+            class="flex w-full border-1 border-zinc-200 shadow-sm h-10 items-center justify-around px-2 rounded hover:shadow-md cursor-pointer "
+          >
+            <i class="ri-google-fill"></i>
+            <p>Sign in with Google</p>
+          </button>
+          <p class="text-xs text-zinc-400">
+            Forgotten your password or you login datails?
+            <a href="" class="underline focus:outline-none">Get help</a> signing in
+          </p>
+        </div>
+      </form>
+
+      <form action="" class=" w-full md:w-65 flex flex-col gap-10 md:block" id="Form2">
+        <div class="flex text w-full items-center pt-12">
+          <div><i class="ri-coreos-fill text-3xl"></i></div>
+          <p class="font-bold text-xl">Wonder</p>
+        </div>
+        <div class="">
+          <p class="text-4xl font-semibold">Get Started</p>
+          <p class="text-sm text-zinc-400 flex">
+            Already have an account?
+            <a href="" onclick="slideRight(event)" class="hidden md:block font-bold text-black">Sign in</a>
+            <a href="" onclick="toggle()" class="block md:hidden font-bold text-black">Sign in</a>
+          </p>
+          <p class="text-sm text-zinc-400">
+            By Creating an account you will become the
+            <b class="text-black">1198th</b> member of Wondar
+          </p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="relative z-0">
+                <input type="email" id="Email_s" class="block py-2.5 px-0 w-full text-sm text-zinc-400 bg-transparent border-0 border-b-1 border-zinc-400 appearance-none dark:text-black dark:border-zinv-400  focus:outline-none focus:ring-0 focus:border-black peer" placeholder="" name="Email_s" />
+                <label for="disabled_standard" class="absolute text-base text-gray-400 dark:text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-zinc-400 peer-focus:dark:text-zinc-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"> Email </label >
+            </div>
+          <div class="flex gap-2 ">
+           <div class="relative z-0 w-full">
+                <input type="text" id="username" class="block py-2.5 px-0 w-full text-sm text-zinc-400 bg-transparent border-0 border-b-1 border-zinc-400 appearance-none dark:text-black dark:border-zinv-400  focus:outline-none focus:ring-0 focus:border-black peer" placeholder="" name="username"/>
+                <label for="disabled_standard" class="absolute text-base text-gray-400 dark:text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-zinc-400 peer-focus:dark:text-zinc-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto" > User Name </label >
+            </div>
+            <div class="relative z-0 w-full">
+                <input type="text" id="firstname" class="block py-2.5 px-0 w-full text-sm text-zinc-400 bg-transparent border-0 border-b-1 border-zinc-400 appearance-none dark:text-black dark:border-zinv-400  focus:outline-none focus:ring-0 focus:border-black peer" placeholder="" name="firstname"/>
+                <label for="disabled_standard" class="absolute text-base text-gray-400 dark:text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-zinc-400 peer-focus:dark:text-zinc-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"> First Name</label  >
+            </div>
+          </div>
+          <div class="relative z-0 flex border-0 border-b-1 border-zinc-400 transition-all hover:border-b-1 hover:border-black">
+                <input type="password" id="password2" class="block py-2.5 px-0 w-full text-sm text-zinc-400 bg-transparent  appearance-none dark:text-black dark:border-zinv-400  focus:outline-none focus:ring-0 focus:border-black peer" placeholder="" name="Password_in"/>
+                <label for="disabled_standard" class="absolute text-base text-gray-400 dark:text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-zinc-400 peer-focus:dark:text-zinc-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"> Password</label >
+                  <button type="button" onclick="password()" class="cursor-pointer focus:outline-none"><i class="ri-eye-line hidden" id="openeye"></i><i class="ri-eye-off-line " id="closeeye"></i></button>
+            </div>
+          <div class="relative z-0 flex border-0 border-b-1 border-zinc-400 transition-all hover:border-b-1 hover:border-black">
+                <input type="password" id="password3" class="block py-2.5 px-0 w-full text-sm text-zinc-400 bg-transparent  appearance-none dark:text-black   focus:outline-none focus:ring-0 focus:border-black peer" placeholder="" name="ConfirmPassword"/>
+                <label for="disabled_standard" class="absolute text-base text-gray-400 dark:text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-zinc-400 peer-focus:dark:text-zinc-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto validator"> Confirm Password </label >
+              <button type="button" onclick="Password()" class="cursor-pointer focus:outline-none"><i class="ri-eye-line hidden" id="open_eye"></i><i class="ri-eye-off-line " id="close_eye"></i></button>
+          </div>
+          <div class="flex items-center hidden" id="Error">
+            <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" fill="red"/>
+            </svg>
+            <div class="text-red-600 text-sm">
+              <span class="font-medium">Error!</span> Passwords do not match!
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 md:gap-5 md:mt-4">
+          <button  type="submit" onclick="signIn()"
+            class="bg-black text-white h-10 rounded-xl hover:bg-white hover:border-1 hover:border-black hover:text-black transition-all duration-300 cursor-pointer"
+          >
+            Sign up
+          </button>
+          <button
+            class="flex w-full border-1 border-zinc-200 shadow-sm h-10 items-center justify-around px-2 rounded hover:shadow-md cursor-pointer"
+          >
+            <i class="ri-google-fill"></i>
+            <p>Sign up with Google</p>
+          </button>
+          <p class="text-xs text-zinc-400">
+            By signing up, I agree to the
+            <a href="" class="underline focus:outline-none">Terms of Services</a> and
+            <a href="" class="underline focus:outline-none">Privacy Policy</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <script>
+     function slideLeft(event) 
+    {
+      event.preventDefault();
+      const slide = document.getElementById("slide");
+
+      slide.style.translate = "0 0";
+    }
+    function slideRight(event) {
+      event.preventDefault();
+      const slider = document.getElementById("slide");
+
+      slider.style.translate = "100% 0";
+    }
+
+    function showPassword()
+    {
+      const eyeOpen = document.getElementById("open");
+      const eyeClose = document.getElementById("close");
+      const input = document.getElementById("password1");
+
+      if(eyeOpen.classList.contains("hidden"))
+      {
+        input.type = "text";
+      }
+      else
+      {
+        input.type = "password";
+      }
+      eyeOpen.classList.toggle("hidden");
+      eyeClose.classList.toggle("hidden");
+    }
+    
+    function password()
+    {
+      const eyeOpen = document.getElementById("openeye");
+      const eyeClose = document.getElementById("closeeye");
+      const input = document.getElementById("password2");
+
+      if(input.type == "password")
+      {
+            input.type = "text";
+            eyeOpen.classList.remove("hidden");
+            eyeClose.classList.add("hidden");
+      }
+      else
+      {
+        input.type = "password";
+        eyeOpen.classList.add("hidden");
+        eyeClose.classList.remove("hidden");
+      }
+    }
+  function Password()
+  {
+
+      const eyeOpen = document.getElementById("open_eye");
+      const eyeClose = document.getElementById("close_eye");
+      const input = document.getElementById("password3");
+      if(input.type == "password")
+      {
+            input.type = "text";
+            eyeOpen.classList.remove("hidden");
+            eyeClose.classList.add("hidden");
+      }
+      else
+      {
+        input.type = "password";
+        eyeOpen.classList.add("hidden");
+        eyeClose.classList.remove("hidden");
+      }
+  }
+  //form toggle
+  function toggle()
+  {
+      const Form1 = document.getElementById("Form1");
+      const Form2 = document.getElementById("Form2");
+      event.preventDefault();
+      Form1.classList.toggle("hidden");
+      Form2.classList.toggle("hidden");
+  }
+  // user data 
+  let users = [];
+  let userCount = 0;
+  function signIn()
+  { 
+    event.preventDefault();
+    const email = document.getElementById("Email_s").value;
+    const Username = document.getElementById("username").value;
+    const Firstname = document.getElementById("firstname").value;
+    const Password = document.getElementById("password2").value;
+    const Password3 = document.getElementById("password3").value;
+    const error = document.getElementById("Error");
+    let user = 
+    {
+      "Email" : email,
+      "UserName" : Username,
+      "FirstName" : Firstname,
+      "password" : Password
+    }
+    users.push(user);
+    userCount++;
+    if(Password !== Password3)
+    {
+      error.classList.remove("hidden");
+      document.getElementById("password2").value = "";
+      document.getElementById("password3").value = "";
+    }
+    else
+    {
+      error.classList.add("hidden");
+      document.getElementById("Email_s").value = "";
+      document.getElementById("username").value = "";
+      document.getElementById("firstname").value = "";
+      document.getElementById("password2").value = "";
+      document.getElementById("password3").value = "";
+
+    }
+  }
+  function signUp()
+  {
+    const email_u = document.getElementById("Email_up").value;
+    const password_u = document.getElementById("password1").value;
+    const error1 = document.getElementById("Error1");
+    const error2 = document.getElementById("Error2");
+    const error3 = document.getElementById("Error3");
+
+    event.preventDefault();
+     users.forEach(element => 
+     {
+        if(email_u === element.Email && password_u === element.password)
+        { 
+           window.location.href = "Success.html"; 
+
+        }
+        else
+        { 
+          
+          if(email_u !== element.Email && password_u !== element.password)
+          {
+            error1.classList.remove("hidden");
+            error2.classList.add("hidden");
+            error3.classList.add("hidden");
+          }
+          else if(email_u !== element.Email)
+          {
+            error1.classList.add("hidden");
+            error2.classList.remove("hidden");
+            error3.classList.add("hidden");
+          }
+          else if(password_u !== element.password)
+          {
+            error1.classList.add("hidden");
+            error2.classList.add("hidden");
+            error3.classList.remove("hidden");
+          }
+          document.getElementById("Email_up").value = "";
+          document.getElementById("password1").value = "";
+
+        }
+     });
+     
+  }
+   const items = document.querySelectorAll('[data-carousel-item]');
+  const indicators = document.querySelectorAll('[data-carousel-slide-to]');
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  function showSlide(index) {
+    items.forEach((item, i) => {
+      item.classList.add('hidden');
+      item.setAttribute('data-carousel-item', '');
+      indicators[i].classList.remove('bg-blue-600');
+      indicators[i].classList.add('bg-gray-400');
+    });
+
+    items[index].classList.remove('hidden');
+    items[index].setAttribute('data-carousel-item', 'active');
+    indicators[index].classList.add('bg-blue-600');
+    indicators[index].classList.remove('bg-gray-400');
+
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    const nextIndex = (currentIndex + 1) % items.length;
+    showSlide(nextIndex);
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 7000); // every 4 seconds
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  window.onload = () => {
+    showSlide(currentIndex);
+    startAutoSlide();
+
+    indicators.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopAutoSlide();      // optional: pause auto on manual click
+        showSlide(index);
+        startAutoSlide();     // resume after click
+      });
+    });
+  };
+  </script>
+</html>
